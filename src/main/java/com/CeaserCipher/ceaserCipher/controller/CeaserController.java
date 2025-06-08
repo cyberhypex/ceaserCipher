@@ -17,7 +17,7 @@ public class CeaserController {
     @GetMapping("/encrypt")
     public String encryptMessage(
             @RequestParam String text,
-            @RequestParam Integer shift
+            @RequestParam(defaultValue = "3") Integer shift
     ){
         return ceaserCipher.encrypt(text,shift);
     }
@@ -25,7 +25,7 @@ public class CeaserController {
     @GetMapping("/decrypt")
     public String decryptMessage(
             @RequestParam String text ,
-            @RequestParam Integer shift
+            @RequestParam(defaultValue = "3") Integer shift
     ){
         return ceaserCipher.decrypt(text,shift);
     }
