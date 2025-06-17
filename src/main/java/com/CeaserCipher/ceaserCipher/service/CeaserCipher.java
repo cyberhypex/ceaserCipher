@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 public class CeaserCipher {
     public  String encrypt(String text, Integer shift) {
         StringBuilder result = new StringBuilder();
+        shift=shift%26;
 
         for (char character : text.toCharArray()) {
             if (Character.isLetter(character)) {
@@ -20,6 +21,7 @@ public class CeaserCipher {
     }
     public  String decrypt(String text, Integer shift) {
         StringBuilder result = new StringBuilder();
+        shift=shift%26;
 
         for (char character : text.toCharArray()) {
             if (Character.isLetter(character)) {
