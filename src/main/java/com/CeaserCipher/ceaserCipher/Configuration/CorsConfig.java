@@ -13,7 +13,7 @@ public class CorsConfig {
         @Override
             public void addCorsMappings(CorsRegistry corsRegistry){
         corsRegistry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173")
+                .allowedOrigins("https://ceaser-cipher-frontend.vercel.app/")
                 .allowedMethods("GET");
         }
         };
