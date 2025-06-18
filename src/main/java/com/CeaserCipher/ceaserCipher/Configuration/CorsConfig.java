@@ -14,7 +14,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry corsRegistry){
         corsRegistry.addMapping("/**")
                 .allowedOrigins("https://ceaser-cipher-frontend.vercel.app/","http://localhost:5173/")
-                .allowedMethods("GET");
+                .allowedMethods("GET","POST", "PUT", "DELETE");
         }
         };
     }
