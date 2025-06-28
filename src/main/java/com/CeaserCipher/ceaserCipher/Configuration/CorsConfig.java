@@ -13,7 +13,7 @@ public class CorsConfig {
         @Override
             public void addCorsMappings(CorsRegistry corsRegistry){
         corsRegistry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173")
+                .allowedOrigins("https://lucent-bubblegum-9def40.netlify.app")
                 .allowedMethods("GET","POST", "PUT", "DELETE")
                 .allowedHeaders("*");
         }
