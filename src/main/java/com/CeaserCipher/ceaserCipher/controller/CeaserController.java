@@ -14,6 +14,11 @@ public class CeaserController {
     @Autowired
     private CeaserCipher ceaserCipher;
 
+    @GetMapping("/health")
+    public String health(){
+        return "Health check";
+    }
+
     @GetMapping("/encrypt")
     public String encryptMessage(
             @RequestParam String text,
